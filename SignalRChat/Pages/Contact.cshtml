@@ -1,19 +1,19 @@
 ﻿@page
-@model ContactModel
-@{
-    ViewData["Title"] = "Contact";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="container">
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-12">
+			<input type="button" id="sendButton" value="Do Call" />
+			<hr />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">&nbsp;</div>
+		<div class="col-6">
+			<ul id="messagesList"></ul>
+		</div>
+	</div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script src="~/js/quick.js"></script>

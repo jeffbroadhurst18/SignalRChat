@@ -1,4 +1,3 @@
-C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.csprojAssemblyReference.cache
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.csproj.CoreCompileInputs.cache
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.RazorAssemblyInfo.cache
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.RazorAssemblyInfo.cs
@@ -30,3 +29,4 @@ C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\Signa
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.dll
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.pdb
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.csproj.CopyComplete
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRChat\obj\Debug\netcoreapp2.1\SignalRChat.csprojAssemblyReference.cache

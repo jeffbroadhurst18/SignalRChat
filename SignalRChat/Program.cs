@@ -14,6 +14,7 @@ namespace SignalRChat
 	{
 		public static void Main(string[] args)
 		{
+			Caller.GetScoreAsync().Wait();
 			CreateWebHostBuilder(args).Build().Run();
 		}
 
