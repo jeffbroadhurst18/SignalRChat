@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{5FFB2E58-1DD8-4E00-8DF5-E7939949CCF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickAPI", "QuickAPI\QuickAPI.csproj", "{E514A218-6F03-43C0-8CD0-ADDD0CB57F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickAPI", "QuickAPI\QuickAPI.csproj", "{E514A218-6F03-43C0-8CD0-ADDD0CB57F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRBroad", "SignalRBroad\SignalRBroad.csproj", "{FBCB2BD9-6180-4937-9A73-2DF4E08D2623}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E514A218-6F03-43C0-8CD0-ADDD0CB57F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E514A218-6F03-43C0-8CD0-ADDD0CB57F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E514A218-6F03-43C0-8CD0-ADDD0CB57F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCB2BD9-6180-4937-9A73-2DF4E08D2623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCB2BD9-6180-4937-9A73-2DF4E08D2623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCB2BD9-6180-4937-9A73-2DF4E08D2623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCB2BD9-6180-4937-9A73-2DF4E08D2623}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

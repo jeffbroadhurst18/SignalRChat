@@ -1,0 +1,6 @@
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.csprojAssemblyReference.cache
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.csproj.CoreCompileInputs.cache
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.RazorAssemblyInfo.cache
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.RazorAssemblyInfo.cs
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.AssemblyInfoInputs.cache
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroadcast\obj\Debug\netcoreapp2.1\SignalRBroadcast2.AssemblyInfo.cs
