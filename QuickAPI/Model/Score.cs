@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace QuickAPI.Controllers.Model
+namespace QuickAPI.Model
 {
 	public class Score
 	{

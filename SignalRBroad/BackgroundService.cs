@@ -21,6 +21,8 @@ namespace SignalRBroad
 		{
 			_hubContext = hubContext;
 		}
+
+		//Automatically starts this methos cos inherits from BackgroundService
 		protected override async Task ExecuteAsync(CancellationToken cancellationToken)
 		{
 			while (!cancellationToken.IsCancellationRequested)

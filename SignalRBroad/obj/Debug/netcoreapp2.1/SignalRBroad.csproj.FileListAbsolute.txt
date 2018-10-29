@@ -29,3 +29,4 @@ C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroad\obj\Debug\netcoreapp2.1\Sign
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroad\obj\Debug\netcoreapp2.1\SignalRBroad.dll
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroad\obj\Debug\netcoreapp2.1\SignalRBroad.pdb
 C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroad\obj\Debug\netcoreapp2.1\SignalRBroad.csproj.CopyComplete
+C:\Users\Jeff\Source\Repos\SignalRChat\SignalRBroad\obj\Debug\netcoreapp2.1\SignalRBroad.csprojAssemblyReference.cache
