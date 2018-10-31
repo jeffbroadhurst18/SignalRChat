@@ -30,38 +30,35 @@ namespace SignalRBroad.Hubs
 
 			if (deserializedScore.Id == 0)
 			{
-				var buffer = System.Text.Encoding.UTF8.GetBytes(scoreString);
+				var buffer = Encoding.UTF8.GetBytes(scoreString);
 				var byteContent = new ByteArrayContent(buffer);
 				byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 				HttpResponseMessage response = await client.PostAsync("http://localhost/Quick/api/values", byteContent);
 
-				Score score = new Score();
 				if (response.IsSuccessStatusCode)
 				{
-					return await response.Content.ReadAsAsync<Score>();
-
+					Score createdScore = await response.Content.ReadAsAsync<Score>();
+					return createdScore;
 				}
 			}
 			else
 			{
-				var content = new FormUrlEncodedContent(new[]
-				{
-				 new KeyValuePair<string, string>("AwayName", deserializedScore.AwayName),
-				 new KeyValuePair<string, string>("AwayScore", deserializedScore.AwayScore),
-				 new KeyValuePair<string, string>("HomeName", deserializedScore.HomeName),
-				 new KeyValuePair<string, string>("HomeScore", deserializedScore.HomeScore),
-				 new KeyValuePair<string, string>("Id", deserializedScore.Id.ToString())
-				});
-				HttpResponseMessage response = await client.PutAsync("http://localhost/Quick/api/values/"  + deserializedScore.Id.ToString(), content);
+				var buffer = Encoding.UTF8.GetBytes(scoreString);
+				var byteContent = new ByteArrayContent(buffer);
+				byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+				HttpResponseMessage response = await client.PutAsync("http://localhost/Quick/api/values/" + deserializedScore.Id.ToString(), byteContent);
 
-				Score score = new Score();
 				if (response.IsSuccessStatusCode)
 				{
 					return await response.Content.ReadAsAsync<Score>();
-
 				}
 			}
 			return null;
+		}
+
+		public async void ClearScores()
+		{
+			HttpResponseMessage response = await client.DeleteAsync("http://localhost/Quick/api/values");
 		}
 	}
 }

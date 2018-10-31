@@ -4,19 +4,11 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 var myUser;
 
 connection.on("ReceiveMessage", function (message) {
-	//var currentTime = moment(new Date().getTime()).format('HH:mm:ss');
 
-	var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	//var encodedMsg = currentTime + ": " + user + " --> " + msg;
-
+	var encodedMsg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+	
 	var li = document.createElement("li");
-	//if (user === myUser) {
-	//	li.style = "font-weight:bold; color:blue";
-	//}
-	//else {
-	//	li.style = "color:red";
-	//}
-
+	
 	li.textContent = encodedMsg;
 	document.getElementById("messagesList").appendChild(li);
 });
@@ -37,8 +29,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 		var data = JSON.parse(this.response);
 
 		data.forEach(score => {
-			// Log each movie's title
-			console.log(score.homeName);
+				console.log(score.homeName);
 		});
 	};
 	request.send();

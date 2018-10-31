@@ -28,10 +28,14 @@ namespace SignalRBroad
 			while (!cancellationToken.IsCancellationRequested)
 			{
 				var scores = await GetScoreAsync();
-				var score = scores[0];
-				var scoreString = string.Format("{0} {1} - {2} {3}", score.HomeName, score.HomeScore, score.AwayName, score.AwayScore);
+				var scoreList = new List<string>();
 
-				await _hubContext.Clients.All.SendAsync("BroadcastMessage", scoreString);
+				foreach(var score in scores)
+				{
+					scoreList.Add(string.Format("{0} {1} - {2} {3}", score.HomeName, score.HomeScore, score.AwayName, score.AwayScore));
+				}
+
+				await _hubContext.Clients.All.SendAsync("BroadcastMessage", scoreList);
 
 				await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken);
 			}

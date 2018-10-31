@@ -100,5 +100,13 @@ namespace QuickAPI.Controllers
 		public void Delete(int id)
 		{
 		}
+
+		[HttpDelete()]
+		public async Task<IActionResult> Delete()
+		{
+			await _context.Scores.ForEachAsync(r => _context.Scores.Remove(r));
+			await _context.SaveChangesAsync();
+			return Ok();
+		}
 	}
 }

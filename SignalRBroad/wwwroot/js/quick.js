@@ -4,13 +4,18 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/broadcastHub").bui
 var myUser;
 
 connection.on("BroadcastMessage", function (message) {
-	var currentTime = moment(new Date().getTime()).format('HH:mm:ss');
-	var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-	var encodedMsg = currentTime + ": " + msg;
-	var li = document.createElement("li");
 
-	li.textContent = encodedMsg;
-	document.getElementById("messagesList").appendChild(li);
+	document.getElementById("messagesList").innerHTML = "";
+
+	message.forEach(function (m) {
+		var msg = m.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+		var li = document.createElement("li");
+		li.textContent = msg;
+		document.getElementById("messagesList").appendChild(li);
+	});
+
+	var currentTime = moment(new Date().getTime()).format('HH:mm:ss');
+	document.getElementById("current-time").innerText = currentTime;
 });
 
 connection.start().catch(function (err) {
@@ -27,15 +32,23 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 		ident = 0;
 	}
 
-	var json = "{\"id\":\"" + ident + "\"," + "\"AwayName\":\"" + awayName + "\",\"AwayScore\":\"" + awayScore + "\",\"HomeName\":\"" + homeName + "\",\"HomeScore\":\"" + homeScore + "\"}";
+	var json = "{\"Id\":\"" + ident + "\"," + "\"AwayName\":\"" + awayName + "\",\"AwayScore\":\"" + awayScore + "\",\"HomeName\":\"" + homeName + "\",\"HomeScore\":\"" + homeScore + "\"}";
 
-	connection.invoke("SendScore", json).catch(function (err) {
-		return console.error(err.toString());
-	});
+	connection.invoke("SendScore", json).then(function (response) {
+		console.log(response.id); ident = response.id;
+		document.getElementById("ident").value = ident.toString();
+		document.getElementById("ident").innerText = ident.toString();
+	}).catch(function (err)
+		{
+			return console.error(err.toString());
+		});
+	
 	event.preventDefault();
-});
+}); 
 
 // Send request
-
-
-
+document.getElementById("clearButton").addEventListener("click", function (event) {
+	connection.invoke("ClearScores").then(function (response) {
+		console.log("Scores Cleared");
+	});
+});
