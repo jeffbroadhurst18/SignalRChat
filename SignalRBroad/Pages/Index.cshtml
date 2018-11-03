@@ -1,26 +1,36 @@
 ﻿@page
 <div class="container">
-	<div class="row">&nbsp;</div>
-
 	<div class="row">
-		<div class="col-12">
+		<div class="col-sm-3">
 			Home Name <input type="text" id="home-name" />
+		</div>
+		<div class="col-sm-3">
 			Home Score <input type="text" id="home-score" />
+		</div>
+		<div class="col-sm-3">
 			Away Name <input type="text" id="away-name" />
+		</div>
+		<div class="col-sm-3">
 			Away Score <input type="text" id="away-score" />
-			<div id="ident" style="visibility: hidden;"></div>
-			<input type="button" id="sendButton" value="Update Score" />
-			<input type="button" id="clearButton" value="Clear Scores" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2" id="ident" style="visibility: hidden;"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<input type="button" class="btn btn-primary" id="sendButton" value="Update Score" />
+		</div>
+		<div class="col-sm-2">
+			<input type="button" class="btn btn-warning" id="clearButton" value="Clear Scores" />
 		</div>
 	</div>
 	<br />
 	<div class="row">
-		<div class="col-6">&nbsp;</div>
-		<div id="current-time"></div>
+		<div class="coll-sm-2" id="current-time"></div>
 	</div>
 	<div class="row">
-		<div class="col-6">&nbsp;</div>
-		<div class="col-6">
+		<div class="col-sm-6">
 			<ul id="messagesList"></ul>
 		</div>
 	</div>
