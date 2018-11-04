@@ -7,15 +7,15 @@ connection.on("BroadcastMessage", function (message) {
 
 	document.getElementById("messagesList").innerHTML = "";
 
+	var currentTime = moment(new Date().getTime()).format('HH:mm');
+	document.getElementById("current-time").innerText = "Latest Score at: " + currentTime;
+
 	message.forEach(function (m) {
 		var msg = m.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 		var li = document.createElement("li");
 		li.textContent = msg;
 		document.getElementById("messagesList").appendChild(li);
 	});
-
-	var currentTime = moment(new Date().getTime()).format('HH:mm:ss');
-	document.getElementById("current-time").innerText = currentTime;
 });
 
 connection.start().catch(function (err) {
@@ -49,6 +49,12 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 // Send request
 document.getElementById("clearButton").addEventListener("click", function (event) {
 	connection.invoke("ClearScores").then(function (response) {
+		document.getElementById("home-name").value = "";
+		document.getElementById("home-score").value = "";
+		document.getElementById("away-name").value = "";
+		document.getElementById("away-score").value = "";
+		document.getElementById("ident").value = 0;
+		
 		console.log("Scores Cleared");
 	});
 });

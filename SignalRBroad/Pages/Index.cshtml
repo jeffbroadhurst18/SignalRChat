@@ -1,23 +1,25 @@
 ﻿@page
 <div class="container">
 	<div class="row">
-		<div class="col-sm-3">
-			Home Name <input type="text" id="home-name" />
+		<br />
+		<div class="col-sm-3 home-color">
+			<label for="home-name" class="words">Home Name </label><input type="text" id="home-name" />
 		</div>
-		<div class="col-sm-3">
-			Home Score <input type="text" id="home-score" />
+		<div class="col-sm-3 home-color">
+			<label for="home-score" class="words">Home Score </label><input type="text" id="home-score" class="score" />
 		</div>
-		<div class="col-sm-3">
-			Away Name <input type="text" id="away-name" />
+		<div class="col-sm-3 away-color">
+			<label for="away-name" class="words">Away Name </label><input type="text" id="away-name" />
 		</div>
-		<div class="col-sm-3">
-			Away Score <input type="text" id="away-score" />
+		<div class="col-sm-3 away-color">
+			<label for="away-score" class="words">Away Score </label><input type="text" id="away-score" class="score" />
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-2" id="ident" style="visibility: hidden;"></div>
+		<div class="col-sm-2" id="ident" style="display: none;"></div>
 	</div>
 	<div class="row">
+		<br />
 		<div class="col-sm-2">
 			<input type="button" class="btn btn-primary" id="sendButton" value="Update Score" />
 		</div>
@@ -27,14 +29,13 @@
 	</div>
 	<br />
 	<div class="row">
-		<div class="coll-sm-2" id="current-time"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<ul id="messagesList"></ul>
+		<div class="col-sm-6 panel panel-primary score-display">
+			<div class="panel-heading" id="current-time">Latest Score at: </div>
+			<div class="panel-body" id="messagesList"></div>
 		</div>
 	</div>
 </div>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 <script src="~/js/quick.js"></script>
+<link href="~/css/quick.css" rel="stylesheet" />

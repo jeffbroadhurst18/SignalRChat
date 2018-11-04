@@ -23,6 +23,8 @@ namespace SignalRBroad
 		[MaxLength(20)]
 		public string AwayScore { get; set; }
 
+		public DateTime StartTime { get; set; }
+
 		public static implicit operator Task<object>(Score v)
 		{
 			throw new NotImplementedException();

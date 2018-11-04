@@ -22,5 +22,7 @@ namespace QuickAPI.Model
 		[Required]
 		[MaxLength(20)]
 		public string AwayScore { get; set; }
+		
+		public DateTime StartTime { get; set; }
 	}
 }

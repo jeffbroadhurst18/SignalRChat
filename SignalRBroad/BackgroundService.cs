@@ -32,7 +32,12 @@ namespace SignalRBroad
 
 				foreach(var score in scores)
 				{
-					scoreList.Add(string.Format("{0} {1} - {2} {3}", score.HomeName, score.HomeScore, score.AwayName, score.AwayScore));
+					var minsPlayed = 0;
+					if (score.StartTime != new DateTime(1,1,1))
+					{
+						minsPlayed = (DateTime.Now - score.StartTime).Duration().Minutes;
+					}
+					scoreList.Add(string.Format("{4} mins: {0} {1} - {2} {3}", score.HomeName, score.HomeScore, score.AwayName, score.AwayScore,minsPlayed.ToString()));
 				}
 
 				await _hubContext.Clients.All.SendAsync("BroadcastMessage", scoreList);

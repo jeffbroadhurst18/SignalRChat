@@ -36,8 +36,7 @@ namespace QuickAPI.Controllers
 			//var res = sr.ReadToEnd();
 		}
 
-
-
+		
 		// GET api/values
 		[EnableCors("Wildermuth")] //Used with cookie authentication
 		[HttpGet]
@@ -66,7 +65,8 @@ namespace QuickAPI.Controllers
 				HomeName = score.HomeName,
 				HomeScore = score.HomeScore,
 				AwayName = score.AwayName,
-				AwayScore = score.AwayScore
+				AwayScore = score.AwayScore,
+				StartTime = DateTime.Now
 			};
 
 			_context.Scores.Add(newScore);

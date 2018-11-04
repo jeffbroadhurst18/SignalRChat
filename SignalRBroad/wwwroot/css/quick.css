@@ -1,0 +1,32 @@
+﻿body {
+}
+
+.score {
+	width: 25%;
+}
+
+.words {
+	margin-right:5px;
+}
+
+.home-color {
+	background-color:goldenrod;
+	border-radius:5px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+.away-color {
+	background-color: lightblue;
+	border-radius: 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#messagesList {
+	list-style:none;
+}
+
+.score-display {
+	padding: 0 0;
+} 
